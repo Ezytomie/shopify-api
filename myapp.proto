@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package myapp;
+
+message Product {
+  string id = 1;
+  string name = 2;
+  float price = 3;
+}
+
+service ProductService {
+  rpc AddProduct(Product) returns (Product);
+  rpc DeleteProduct(Product) returns (Product);
+  rpc UpdateProduct(Product) returns (Product);
+}
